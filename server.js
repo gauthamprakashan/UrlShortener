@@ -3,9 +3,10 @@ const app = express()
 const mongoose = require('mongoose')
 const ShortUrl = require('./models/shortUrl')
 
+app.use(express.urlencoded({extended : false}))
 
 app.set('view engine','ejs')
-app.use(express.urlencoded({extended : false}))
+
 
 mongoose.connect('mongodb+srv://itsgauthamp:gautham1@cluster0.wjlh1rp.mongodb.net/urlShortner',{
 
